@@ -1,0 +1,879 @@
+:root {
+  --white: #fff; /* body-bgcolor, hero-title-color, hero-button-text-color, team-member-bgcolor, foot-logo-part-color, foot-text-color */
+
+  --cloud: #f4f4fd; /* team-bgcolor, benefits-icon-bgcolor, foot-logo-part-color, overlay-text-color, icons-color */
+
+  --slate: #434455; /* body text color, contact-list-link-color, team-portfolio-text-color, page-footer-text-color */
+
+  --iris: #4d5ae5; /* logo, hero button bgcolor, social link icon bgcolor, overlay bgcolor */
+
+  --ocean: #404bbf; /* logo-hover, underline in header, menu-list-link hover color, contact-list-link-hover-color, hero-button-hover, team social link hover color, hover-team-link-icon-color */
+
+  --navy-blue: #2e2f42; /* menu-list-link-color, page-footer-bgcolor, logo-second-half-color, hero-bgcolor, benefits-list-title-color, team-portfolio-text-color, page-footer-bgcolor */
+
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+
+  --dairy: #fcfcfc; /* modal */
+
+  --cornflower: #e7e9fc; /* cross */
+
+  --light-slate: #8e8f99;
+
+  --green: #31d0aa; /* hover-social-link-icon-color in footer*/
+
+  --body-font-family: 'Roboto', sans-serif;
+  --logo-font-family: 'Raleway', sans-serif;
+}
+
+/* Звільняємо посилання від підкреслень та списки від маркерів, скидання значень відступів. Для зображень - зміна типу елемента для прибирання порожнього місця пид ними, а також обрана властивість, що дозволяє повністю заповнити простір батькивського елемента зі збереженням пропорцій*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+input {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style-type: none;
+}
+/* Загальний контейнер, який буде застосовуватісь у всіх секціях. Йому завдані: фіксована шіріна, автовирівнювання всього контейнера по цетру сторінки та внутрішні відступи справа та зліва */
+
+.container {
+  display: flex;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Для оформлення хедера клас, який по суті розширює оформлення яке завдано у .container. Задан тип вирівнювання, за якого один елемент контейнеру притиснеться до лівої його межї, а другий - до правої. Елементів в контейнері - два (це дочірні елементі, тобто перші по рівню вкладенності): nav та address. Саме вони й вирівнюються. Добре видно коли задати вирівнювання з початку основної осі та додати gap. Все стиснеться ліворуч та з'явиться проміжок між вмістом тегів nav та address */
+
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Для кнопки - долонька) та шрифт, що його вона не успадкує від body */
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Задаємо глобальний стиль: шрифт, який використовується більш за інших на сторінці, відповідно фон та колір шрифта */
+
+body {
+  font-family: var(--body-font-family);
+  color: var(--slate);
+  background-color: var(--white);
+}
+
+/* Header. Вибір шріфта, його ваги, розміру, коліру та ефекти hover/focus для посилання WebStudio. Зміна кольору слова Web. Задання вертикального розміру, так як задаються внутрішні вертикальні відступи. Рамка товщіною 1 піксел та нижній зовнішній відступ */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+}
+
+.head-logo {
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--iris);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-right: 76px;
+}
+
+.logo-head {
+  color: var(--navy-blue);
+}
+
+.head-logo:hover,
+.head-logo:focus {
+  color: var(--ocean);
+}
+
+/* Прибирання курсиву, так як тег address за замовчанням має font-style: italic */
+
+.head-address {
+  font-style: normal;
+}
+/* Зміни навігаційних посилань: колір, вага. Додавання ефектів hover/focus. Контейнер menu типу flex створено, щоб блокові елементи, що вкладені у тег nav (посилання та список), не були один під одним. В цьому контейнері два flex елемента (a та ul). Це значить, що всі властивості з класу menu будуть діяті ліше на них */
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Клас  menu-list (flex-контейнер) потрібен, щоб рядки списку не стояли один пид одним. В цьому контейнері три flex-елемента - рядки списку = > всі властивості контейнера розповсюджуються на ці три елемента */
+
+.menu-list {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+/* .menu-list-item {
+  padding: 24px 0;
+} */
+
+.menu-list-link {
+  display: block;
+  font-weight: 500;
+  color: var(--navy-blue);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 0;
+}
+
+.menu-list-link:hover,
+.menu-list-link:focus {
+  color: var(--ocean);
+}
+
+.menu-list-item:nth-child(1) .menu-list-link {
+  position: relative;
+  color: var(--ocean); /* Зміна кольору першого посилання */
+}
+
+.menu-list-item:nth-child(1) .menu-list-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  /* top: 100%; */
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
+}
+
+/* Зміни контактних посилань: колір. Додавання ефектів hover/focus. Вага за замовчанням правильна. Використання flex-контейнера для розміщення елементів списку в один рядок */
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* .contact-list-item {
+  padding: 24px 0;
+} */
+
+.contact-list-link {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* padding: 24px 0; */
+}
+
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--ocean);
+}
+
+/* Кнопка. Зміна розміру шрифта, його ваги, кольору. Зміна фонового кольору. Задання розміру кнопки та ефектів hover/focus */
+
+.hero {
+  background-color: var(--navy-blue);
+  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/background/office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-align {
+  flex-direction: column;
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 496px;
+}
+
+.hero-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--iris);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer; /* Додавання курсора */
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--ocean);
+}
+
+/* Секція Benefits */
+
+/* Шаблон, що робить невидимим контент (заголовок) */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.benefits-container {
+  display: flex;
+}
+
+.benefits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 112px;
+  margin-bottom: 8px;
+  background-color: var(--cloud);
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  padding: 24px 100px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+.benefits-list-item {
+  width: calc((100% - 72px) / 4);
+}
+.benefits-list-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  /* margin-top: 8px; */
+  margin-bottom: 8px;
+  color: var(--navy-blue);
+}
+.benefits-list-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* Секція Team. Змінили фон секції, виправілі після цього фон комірок на білий та задали їх ширину. Текст вирівняли по центру як заголовка секції так і всередині комірок */
+
+.team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--cloud);
+}
+.team-align {
+  flex-direction: column;
+}
+
+.team-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
+/* Ширину для класу team-member додав виключно для естетики. !!!НЕ ЗАБУТИ ВІДРЕДАГУВАТИ!!!*/
+
+.team-member {
+  width: calc((100% - 72px) / 4);
+  background-color: var(--white);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  /* box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08); */
+}
+
+.cart-description {
+  padding: 32px 0;
+}
+
+.team-members-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--team-portfolio-text-color);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.team-member-text {
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.team-social {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.team-svg {
+  fill: var(--cloud);
+}
+
+.team-social-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--iris);
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--ocean);
+}
+
+/* Секція portfolio */
+
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.portfolio-align {
+  flex-direction: column;
+}
+.portfolio-list {
+  display: flex;
+  column-gap: 24px;
+  row-gap: 48px;
+  flex-wrap: wrap;
+}
+.portfolio-list-item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+  margin-bottom: 72px;
+}
+
+.portfolio-description {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.portfolio-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.portfolio-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 40px 32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--iris);
+  color: var(--cloud);
+}
+
+.portfolio-list-item:hover .overlay {
+  transform: translatey(0);
+}
+
+.portfolio-list-item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+/* Footer. Змінено фон, колір лого та розмір його шрифту. Додані hover/focus */
+
+.page-footer {
+  background-color: var(--navy-blue);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.main-footer-conteiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.page-footer-container {
+  display: inline-block;
+  margin-right: 120px;
+  /* flex-direction: column;
+  align-items: flex-start;
+  row-gap: 16px; */
+}
+
+.foot-logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  color: var(--iris);
+  margin-bottom: 16px;
+}
+
+/* .foot-logo:hover,
+.foot-logo:focus {
+  color: var(--ocean);
+} */
+
+.logo-part {
+  color: var(--cloud);
+}
+
+.foot-text {
+  max-width: 264px;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.footer-text-social {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social-list-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-list-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* width: 40px;
+  height: 40px; */
+  border-radius: 50%;
+  background-color: var(--iris);
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  /* transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--green);
+}
+
+.footer-svg {
+  fill: var(--cloud);
+}
+
+.footter-email-main-container {
+  margin-left: 80px;
+}
+
+.user-email {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--white);
+  outline: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); /* Підсвітка поля вводу */
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); */
+}
+
+.user-email::placeholder {
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.footer-email-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  border: none;
+  background-color: var(--iris);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-btn-icon {
+  margin-left: 16px;
+  fill: var(--white);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: var(--ocean);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.backdrop-on {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 408px;
+  min-height: 584px;
+  background-color: var(--dairy);
+  border-radius: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  top: 24px;
+  right: 24px;
+  line-height: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--cornflower);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.close-button-icon {
+  fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:hover,
+.close-button:focus {
+  background-color: var(--ocean);
+  fill: var(--white);
+  border: none;
+}
+
+.close-button:hover .close-button-icon,
+.close-button:focus .close-button-icon {
+  fill: var(--white);
+}
+
+.modal-text {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navy-blue);
+  margin-bottom: 16px;
+}
+
+.input-field {
+  width: 100%;
+  height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 38px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
+}
+
+.modal-label-container {
+  margin-bottom: 8px;
+}
+
+.modal-icons {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus {
+  border-color: var(--iris);
+  outline: transparent;
+}
+
+.input-div {
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.input-field:focus + .modal-icons {
+  fill: var(--iris);
+}
+
+.comment-area {
+  margin-bottom: 16px;
+}
+
+.comment-text-area {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  resize: none;
+}
+
+.comment-text-area:focus {
+  border-color: var(--iris);
+}
+
+.comment-text-area::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--navy-blue-modal);
+}
+
+.checkbox-main-container {
+  margin-bottom: 24px;
+}
+
+.check-label {
+  color: var(--light-slate);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.modal-privacy-link {
+  color: var(--iris);
+}
+
+.privacy-own-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 2px;
+  cursor: pointer;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-acception:checked + .check-label > .privacy-own-checkbox {
+  background-color: var(--ocean);
+  border: none;
+  fill: var(--cloud);
+}
+
+.modal-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 24px; */
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--iris);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--ocean);
+}
