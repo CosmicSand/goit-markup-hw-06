@@ -1,0 +1,26 @@
+:root {
+  --white: #fff; /* body-bgcolor, hero-title-color, hero-button-text-color, team-member-bgcolor, foot-logo-part-color, foot-text-color */
+
+  --cloud: #f4f4fd; /* team-bgcolor, benefits-icon-bgcolor, foot-logo-part-color, overlay-text-color, icons-color */
+
+  --slate: #434455; /* body text color, contact-list-link-color, team-portfolio-text-color, page-footer-text-color */
+
+  --iris: #4d5ae5; /* logo, hero button bgcolor, social link icon bgcolor, overlay bgcolor */
+
+  --ocean: #404bbf; /* logo-hover, underline in header, menu-list-link hover color, contact-list-link-hover-color, hero-button-hover, team social link hover color, hover-team-link-icon-color */
+
+  --navy-blue: #2e2f42; /* menu-list-link-color, page-footer-bgcolor, logo-second-half-color, hero-bgcolor, benefits-list-title-color, team-portfolio-text-color, page-footer-bgcolor */
+
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+
+  --dairy: #fcfcfc; /* modal */
+
+  --cornflower: #e7e9fc; /* cross */
+
+  --light-slate: #8e8f99;
+
+  --green: #31d0aa; /* hover-social-link-icon-color in footer*/
+
+  --body-font-family: 'Roboto', sans-serif;
+  --logo-font-family: 'Raleway', sans-serif;
+}
