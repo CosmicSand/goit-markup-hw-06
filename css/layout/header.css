@@ -1,19 +1,17 @@
 /* Для оформлення хедера клас, який по суті розширює оформлення яке завдано у .container. Задан тип вирівнювання, за якого один елемент контейнеру притиснеться до лівої його межї, а другий - до правої. Елементів в контейнері - два (це дочірні елементі, тобто перші по рівню вкладенності): nav та address. Саме вони й вирівнюються. Добре видно коли задати вирівнювання з початку основної осі та додати gap. Все стиснеться ліворуч та з'явиться проміжок між вмістом тегів nav та address */
 
-.page-header-container {
+/* .page-header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 /* Header. Вибір шріфта, його ваги, розміру, коліру та ефекти hover/focus для посилання WebStudio. Зміна кольору слова Web. Задання вертикального розміру, так як задаються внутрішні вертикальні відступи. Рамка товщіною 1 піксел та нижній зовнішній відступ */
 
-.page-header {
+/* .page-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
-  /* padding-top: 24px;
-  padding-bottom: 24px; */
 }
 
 .head-logo {
@@ -34,31 +32,28 @@
 .head-logo:hover,
 .head-logo:focus {
   color: var(--ocean);
-}
+} */
 
 /* Прибирання курсиву, так як тег address за замовчанням має font-style: italic */
 
-.head-address {
+/* .head-address {
   font-style: normal;
-}
+} */
 /* Зміни навігаційних посилань: колір, вага. Додавання ефектів hover/focus. Контейнер menu типу flex створено, щоб блокові елементи, що вкладені у тег nav (посилання та список), не були один під одним. В цьому контейнері два flex елемента (a та ul). Це значить, що всі властивості з класу menu будуть діяті ліше на них */
-
+/* 
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
 /* Клас  menu-list (flex-контейнер) потрібен, щоб рядки списку не стояли один пид одним. В цьому контейнері три flex-елемента - рядки списку = > всі властивості контейнера розповсюджуються на ці три елемента */
-
+/* 
 .menu-list {
   display: flex;
   gap: 40px;
   align-items: center;
 }
-/* .menu-list-item {
-  padding: 24px 0;
-} */
 
 .menu-list-link {
   display: block;
@@ -77,32 +72,27 @@
 
 .menu-list-item:nth-child(1) .menu-list-link {
   position: relative;
-  color: var(--ocean); /* Зміна кольору першого посилання */
+  color: var(--ocean); 
 }
 
 .menu-list-item:nth-child(1) .menu-list-link::after {
   content: '';
   display: block;
   position: absolute;
-  /* top: 100%; */
   bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--ocean);
-}
+} */
 
 /* Зміни контактних посилань: колір. Додавання ефектів hover/focus. Вага за замовчанням правильна. Використання flex-контейнера для розміщення елементів списку в один рядок */
 
-.contact-list {
+/* .contact-list {
   display: flex;
   gap: 40px;
 }
-
-/* .contact-list-item {
-  padding: 24px 0;
-} */
 
 .contact-list-link {
   display: block;
@@ -111,10 +101,9 @@
   letter-spacing: 0.02em;
   color: var(--slate);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* padding: 24px 0; */
 }
 
 .contact-list-link:hover,
 .contact-list-link:focus {
   color: var(--ocean);
-}
+} */
