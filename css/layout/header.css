@@ -2,6 +2,15 @@
   .menu-list {
     display: none;
   }
+  .mobile-menu-btn {
+    padding: 0;
+    line-height: 0;
+    border: 1px dashed tomato;
+    background-color: transparent;
+  }
+  .head-address {
+    display: none;
+  }
 }
 
 /* .page-header-container {
