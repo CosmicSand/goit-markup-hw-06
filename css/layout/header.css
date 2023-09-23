@@ -1,3 +1,24 @@
+.page-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-logo {
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--iris);
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-right: 76px;
+}
+
+.logo-head {
+  color: var(--navy-blue);
+}
+
 @media screen and (max-width: 767px) {
   .menu-list {
     display: none;
@@ -12,12 +33,6 @@
     display: none;
   }
 }
-
-/* .page-header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
 
 /* .page-header {
   border-bottom: 1px solid #e7e9fc;
