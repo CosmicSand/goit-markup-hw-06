@@ -19,6 +19,10 @@
   color: var(--navy-blue);
 }
 
+.mobile-menu-icon {
+  fill: var(--common-black);
+}
+
 @media screen and (max-width: 767px) {
   .menu-list {
     display: none;
