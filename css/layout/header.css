@@ -23,19 +23,24 @@
   fill: var(--common-black);
 }
 
-@media screen and (max-width: 767px) {
-  .menu-list {
-    display: none;
-  }
-  .mobile-menu-btn {
-    padding: 0;
-    line-height: 0;
-    border: 1px dashed tomato;
-    background-color: transparent;
-  }
-  .contact-list {
-    display: none;
-  }
+.menu-list {
+  display: none;
+}
+
+.mobile-menu-btn {
+  padding: 0;
+  line-height: 0;
+  border: 1px dashed tomato;
+  background-color: transparent;
+}
+
+.head-address {
+  display: none;
+}
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 /* .page-header {
