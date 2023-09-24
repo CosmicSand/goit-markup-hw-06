@@ -85,7 +85,6 @@
 
 @media screen and (min-width: 768px) {
   .team-list {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -93,6 +92,11 @@
     column-gap: 24px;
   }
 }
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    gap: 24px;
+  }
 
 /* .team {
   padding-top: 120px;
