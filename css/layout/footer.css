@@ -146,10 +146,6 @@
     flex-wrap: wrap;
   }
 
-  .footer-social-list {
-    margin-bottom: 72px;
-  }
-
   .footer-email-container {
     flex-direction: row;
     align-items: center;
@@ -160,6 +156,13 @@
 @media screen and (min-width: 1158px) {
   .page-footer {
     max-width: 1440px;
+  }
+  .foot-text {
+    margin-bottom: 0;
+  }
+
+  .footer-social-list {
+    margin-bottom: 0;
   }
 
   .main-footer-conteiner {
