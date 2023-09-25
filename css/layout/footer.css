@@ -32,6 +32,7 @@
   color: var(--white);
   line-height: 1.5;
   margin-bottom: 72px;
+  padding: 0;
 }
 .footer-text-social {
   text-align: center;
@@ -54,16 +55,15 @@
   margin-right: auto;
 } */
 
-.footer-social-list-item {
+/* .footer-social-list-item {
   width: 40px;
   height: 40px;
-}
+} */
 
 .footer-social-list-link {
   display: flex;
-  width: 100%;
-  height: 100%;
-
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: var(--iris);
   justify-content: center;
@@ -141,13 +141,15 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+/* ======================================= Tablet ========================================*/
+
 @media screen and (min-width: 768px) {
   .main-footer-container {
     display: flex;
     align-items: baseline;
     column-gap: 24px;
     flex-wrap: wrap;
-    margin-left: 108px;
+    padding-left: 108px;
   }
 
   .page-footer-container {
@@ -187,12 +189,7 @@
   .main-footer-conteiner {
     column-gap: 0;
   }
-  .foot-text {
-    max-width: 264px;
-  }
-  .user-email {
-    width: 264px;
-  }
+
   .footter-email-main-container {
     margin-left: 80px;
   }
