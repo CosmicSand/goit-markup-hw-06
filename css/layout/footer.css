@@ -82,7 +82,7 @@
 }
 
 .user-email {
-  width: 264px;
+  width: 288px;
   height: 40px;
   padding: 8px 16px;
   border: 1px solid var(--white);
@@ -149,16 +149,27 @@
     flex-wrap: wrap;
     margin-left: 108px;
   }
+
   .page-footer-container {
     text-align: left;
   }
+
+  .foot-text {
+    max-width: 264px;
+  }
+
   .footer-text-social {
     text-align: left;
   }
+
   .footer-email-container {
     flex-direction: row;
     align-items: center;
     gap: 24px;
+  }
+
+  .user-email {
+    width: 264px;
   }
 }
 @media screen and (min-width: 1158px) {
