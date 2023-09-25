@@ -8,7 +8,7 @@
 @import './base/common.css';
 @import './base/container.css';
 @import './base/modal.css';
-
+@import './base/mobilemodal.css';
 /* Layout */
 
 @import './layout/header.css';
