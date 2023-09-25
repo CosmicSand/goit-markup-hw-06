@@ -58,3 +58,6 @@ body {
   color: var(--slate);
   background-color: var(--white);
 }
+address {
+  font-style: normal;
+}
