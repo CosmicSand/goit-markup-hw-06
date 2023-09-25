@@ -183,6 +183,11 @@
     padding-left: 16px;
   }
 
+  .footer-social-container {
+    margin-left: 120px;
+    margin-right: 80px;
+  }
+
   .page-footer {
     max-width: 1440px;
   }
@@ -194,9 +199,9 @@
     margin-bottom: 0;
   }
 
-  .main-footer-conteiner {
+  /* .main-footer-conteiner {
     column-gap: 0;
-  }
+  } */
 
   .footter-email-main-container {
     margin-left: 80px;
