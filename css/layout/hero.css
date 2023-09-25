@@ -1,7 +1,7 @@
 .hero {
   background-color: var(--navy-blue);
   background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(/images/background/office-mobile.jpg);
+    url(../../images/background/office-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -55,14 +55,14 @@
   screen and (min-device-pixel-ratio: 2) and (min-width: 320px) {
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(/images/background/office-mobile@2x.jpg);
+      url(../../images/background/office-mobile@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(/images/background/office-tablet.jpg);
+      url(../../images/background/office-tablet.jpg);
     max-width: 768px;
     padding-top: 112px;
     padding-bottom: 112px;
@@ -83,14 +83,14 @@
   screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(/images/background/office-tablet@2x.jpg);
+      url(../../images/background/office-tablet@2x.jpg);
   }
 }
 
 @media screen and (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(/images/background/office.jpg);
+      url(../../images/background/office.jpg);
     max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -101,7 +101,7 @@
   screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(/images/background/office@2x.jpg);
+      url(../../images/background/office@2x.jpg);
   }
 }
 
