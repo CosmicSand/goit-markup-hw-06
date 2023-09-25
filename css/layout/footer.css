@@ -147,9 +147,13 @@
   .main-footer-container {
     display: flex;
     align-items: baseline;
-    column-gap: 24px;
+    /* column-gap: 24px; */
     flex-wrap: wrap;
     padding-left: 108px;
+  }
+
+  .footer-social-container {
+    margin-left: 24px;
   }
 
   .page-footer-container {
