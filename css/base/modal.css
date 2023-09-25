@@ -46,16 +46,15 @@
   line-height: 0;
   border-radius: 50%;
   background-color: var(--cornflower);
-  fill: var(--navy-blue);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* .close-button-icon {
-  
+.close-button-icon {
+  fill: var(--navy-blue);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+}
 
 .close-button:hover,
 .close-button:focus {
@@ -83,7 +82,7 @@
   height: 40px;
   padding-top: 11px;
   padding-bottom: 11px;
-  padding-left: 38px;
+  padding-left: 34px;
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -100,13 +99,11 @@
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-field:focus {
   border-color: var(--iris);
-  outline: transparent;
 }
 
 .input-div {
@@ -216,4 +213,20 @@
 .modal-button:hover,
 .modal-button:focus {
   background-color: var(--ocean);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-window {
+    width: 408px;
+    min-height: 584px;
+
+    padding-left: 23px;
+    padding-right: 25px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .modal-window {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
