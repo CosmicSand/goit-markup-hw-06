@@ -10,8 +10,7 @@
 
 .foot-logo {
   display: inline-block;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--logo-font-family);
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.17;
@@ -19,8 +18,6 @@
   font-size: 18px;
   color: var(--iris);
   margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .logo-part {
@@ -36,6 +33,7 @@
   margin-bottom: 72px;
 }
 .footer-text-social {
+  text-align: center;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -50,9 +48,10 @@
   margin-bottom: 72px;
 }
 
-.footer-social-conteiner {
-  margin-left: 120px;
-}
+/* .footer-social-conteiner {
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 .footer-social-list-item {
   width: 40px;
