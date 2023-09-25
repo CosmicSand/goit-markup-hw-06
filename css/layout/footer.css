@@ -82,7 +82,7 @@
 }
 
 .user-email {
-  width: 288px;
+  width: 264px;
   height: 40px;
   padding: 8px 16px;
   border: 1px solid var(--white);
@@ -92,6 +92,7 @@
   letter-spacing: 0.04em;
   background-color: transparent;
   color: var(--white);
+  opacity: 0.3;
   border-radius: 4px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
@@ -143,12 +144,17 @@
 @media screen and (min-width: 768px) {
   .main-footer-container {
     display: flex;
-    /* justify-content: center; */
     align-items: baseline;
     column-gap: 24px;
     flex-wrap: wrap;
+    margin-left: 108px;
   }
-
+  .page-footer-container {
+    text-align: left;
+  }
+  .footer-text-social {
+    text-align: left;
+  }
   .footer-email-container {
     flex-direction: row;
     align-items: center;
