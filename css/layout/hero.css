@@ -8,8 +8,8 @@
   text-align: center;
   padding-top: 72px;
   padding-bottom: 72px;
-  width: 100%;
-  /* max-width: 320px; */
+  /* width: 100%; */
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -63,7 +63,7 @@
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../../images/background/office-tablet.jpg);
-    /* max-width: 768px; */
+    max-width: 768px;
     padding-top: 112px;
     padding-bottom: 112px;
     margin-left: auto;
@@ -91,7 +91,7 @@
   .hero {
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../../images/background/office.jpg);
-    /* max-width: 1440px; */
+    max-width: 1440px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
@@ -104,57 +104,3 @@
       url(../../images/background/office@2x.jpg);
   }
 }
-
-/* .hero {
-  background-color: var(--navy-blue);
-  background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/background/office.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-align {
-  flex-direction: column;
-}
-
-.hero-title {
-  color: var(--white);
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 496px;
-}
-
-.hero-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--white);
-  background-color: var(--iris);
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  border: none;
-  border-radius: 4px;
-  padding: 16px 32px;
-  min-width: 169px;
-  height: 56px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer; 
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--ocean);
-} */
