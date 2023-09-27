@@ -50,16 +50,6 @@
   margin-bottom: 72px;
 }
 
-/* .footer-social-conteiner {
-  margin-left: auto;
-  margin-right: auto;
-} */
-
-/* .footer-social-list-item {
-  width: 40px;
-  height: 40px;
-} */
-
 .footer-social-list-link {
   display: flex;
   width: 40px;
@@ -147,7 +137,6 @@
   .main-footer-container {
     display: flex;
     align-items: baseline;
-    /* column-gap: 24px; */
     flex-wrap: wrap;
     padding-left: 108px;
   }
