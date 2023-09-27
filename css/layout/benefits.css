@@ -10,7 +10,7 @@
 .benefits-list {
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  row-gap: 72px;
 }
 .benefits-list-title {
   font-size: 36px;
@@ -31,10 +31,10 @@
 
 @media screen and (min-width: 768px) {
   .benefits-list {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
   }
   .benefits-list-item {
     width: calc((100% - 24px) / 2);
